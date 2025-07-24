@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+**README.md**
+===============
 
-First, run the development server:
+**Project Overview**
+-------------------
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project is a Next.js application, a web platform for listing and renting properties. The codebase is written in TypeScript and utilizes various libraries and frameworks, including React, Next.js, and Prisma.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Directory Structure**
+-----------------------
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The project's directory structure is organized as follows:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* `app`: Contains the main application code, including components, hooks, and actions.
+* `app/components`: Holds various React components used throughout the application.
+* `app/hooks`: Defines custom hooks for managing state and side effects.
+* `app/actions`: Contains functions for interacting with the Prisma database and performing business logic.
+* `app/libs`: Includes utility libraries, such as the Prisma database client.
+* `pages`: Contains Next.js page components.
+* `public`: Holds static assets, such as images and fonts.
 
-## Learn More
+**Key Components**
+------------------
 
-To learn more about Next.js, take a look at the following resources:
+* **Listing**: A component that represents a single property listing, including its details and reservation information.
+* **SearchModal**: A modal component that allows users to search for listings based on location, dates, and other criteria.
+* **RentModal**: A modal component that enables users to rent a listing, including selecting dates and providing payment information.
+* **Favorites**: A component that displays a user's favorite listings.
+* **Navbar**: A navigation bar that includes links to various pages and features.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Functionality**
+----------------
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The application appears to provide the following functionality:
 
-## Deploy on Vercel
+* Users can search for listings based on location, dates, and other criteria.
+* Users can view listing details, including photos, descriptions, and reservation information.
+* Users can rent a listing, including selecting dates and providing payment information.
+* Users can save listings as favorites.
+* Users can view their favorite listings.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Libraries and Frameworks**
+---------------------------
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* **Next.js**: A React-based framework for building server-rendered and statically generated websites.
+* **React**: A JavaScript library for building user interfaces.
+* **Prisma**: A database client for interacting with a PostgreSQL database.
+* **TypeScript**: A superset of JavaScript that adds optional static typing and other features.
+
+**Installation**
+--------------
+
+To install the project, follow these steps:
+
+1. Clone the repository using `git clone`
+2. Install the dependencies using `npm install` 
+3. Create a new PostgreSQL database and update the `prisma/.env` file with your database credentials
+4. Run `npx prisma migrate dev` to create the database schema
+5. Start the development server using `npm run dev` 
+
